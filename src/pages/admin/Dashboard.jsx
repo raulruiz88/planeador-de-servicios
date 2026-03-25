@@ -112,9 +112,9 @@ const AdminDashboard = () => {
     <div className="flex-col gap-4" style={{ display: 'flex', flex: 1, height: '100%' }}>
       <h1>Dashboard Operativo</h1>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 300px', gap: '1.5rem', flex: 1 }}>
+      <div className="dashboard-grid">
         {/* Calendario Interactivo */}
-        <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '800px' }}>
+        <div className="card calendar-card">
           <h2>Calendario de Órdenes</h2>
           <div style={{ flex: 1, marginTop: '1rem' }}>
             <Calendar
@@ -145,7 +145,7 @@ const AdminDashboard = () => {
 
         {/* Panel lateral derecho (Técnicos) */}
         <div className="flex-col gap-4" style={{ display: 'flex' }}>
-          <div className="card" style={{ display: 'flex', flexDirection: 'column', maxHeight: '480px' }}>
+          <div className="card tech-list-card">
             <h2>Disponibilidad en Tiempo Real</h2>
             <div className="flex-col gap-2" style={{ display: 'flex', marginTop: '1rem', overflowY: 'auto', paddingRight: '0.5rem', flex: 1 }}>
               {technicians.length === 0 ? <p className="text-muted">No hay técnicos.</p> : technicians.map(tech => (

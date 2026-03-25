@@ -207,6 +207,38 @@ h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
   }
 }
 
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.calendar-card {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+}
+
+.tech-list-card {
+  display: flex;
+  flex-direction: column;
+  max-height: 480px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .calendar-card {
+    height: 500px;
+  }
+  .tech-list-card {
+    max-height: none;
+  }
+}
+
 /* React Big Calendar Theme Overrides */
 .rbc-calendar {
   color: var(--text-main);

@@ -116,7 +116,7 @@ const AdminDashboard = () => {
         {/* Calendario Interactivo */}
         <div className="card calendar-card">
           <h2>Calendario de Órdenes</h2>
-          <div style={{ flex: 1, marginTop: '1rem' }}>
+          <div style={{ flex: 1, marginTop: '1rem', minHeight: 0 }}>
             <Calendar
               localizer={localizer}
               events={events}
